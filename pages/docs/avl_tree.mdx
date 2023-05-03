@@ -1,0 +1,93 @@
+# AVL Tree Documentation
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Operations](#operations)
+    1. [Insertion](#insertion)
+    2. [Deletion](#deletion)
+    3. [Searching](#searching)
+3. [Balancing](#balancing)
+4. [Complexity](#complexity)
+5. [Usage](#usage)
+6. [References](#references)
+
+<a name="introduction"></a>
+## 1. Introduction
+
+An **AVL Tree** (named after its inventors, Adelson-Velsky and Landis) is a self-balancing binary search tree. In an AVL tree, the heights of the two child subtrees of any node differ by at most one. If at any time the difference becomes greater than one, rebalancing is performed to restore the property.
+
+AVL trees maintain a balanced structure, which ensures good performance in searching, inserting, and deleting elements.
+
+<a name="operations"></a>
+## 2. Operations
+
+<a name="insertion"></a>
+### 2.1. Insertion
+
+To insert a value in the AVL tree, we follow the same procedure as the insertion in the traditional binary search tree (BST). However, after insertion, we need to check if the AVL property is still valid. If not, we perform rotations to balance the tree.
+
+```python
+def insert(self, value):
+    # Following the BST insertion procedure
+    ...
+
+    # Balancing the AVL tree
+    self.balance()
+
+```
+
+<a name="deletion"></a>
+### 2.2. Deletion
+
+Deletion in an AVL tree is similar to deletion in a binary search tree, with the addition of rebalancing steps. These steps ensure that the tree remains balanced after node removal.
+
+```python
+def delete(self, value):
+    # Following the BST deletion procedure
+    ...
+
+    # Balancing the AVL tree
+    self.balance()
+```
+
+<a name="searching"></a>
+### 2.3. Searching
+
+Searching in an AVL tree follows the same procedure as in a binary search tree. Due to its balanced nature, the average search time is greatly reduced.
+
+```python
+def search(self, value):
+    # Following the BST search procedure
+    ...
+```
+
+<a name="balancing"></a>
+## 3. Balancing
+
+Balancing is performed using rotations, and there are four types:
+
+1. Left rotation
+2. Right rotation
+3. Left-Right rotation
+4. Right-Left rotation
+
+The choice depends on the state of imbalance in the tree. Rotations are performed after any insertion or deletion operation that causes a violation of the AVL property.
+
+<a name="complexity"></a>
+## 4. Complexity
+
+Since AVL trees are always balanced, the maximum height of the tree is `O(log n)`, where `n` is the number of nodes in the tree. This leads to the following complexity for the main operations:
+
+- Insertion: `O(log n)`
+- Deletion: `O(log n)`
+- Searching: `O(log n)`
+
+<a name="usage"></a>
+## 5. Usage
+
+AVL trees are useful in situations where a balanced binary search tree is required. Some common use-cases include:
+
+1. Building indices for databases
+2. Implementing efficient data structures, like maps and sets
+3. Supporting fast lookup, insertion, and removal operations
