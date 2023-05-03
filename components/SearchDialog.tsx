@@ -269,10 +269,10 @@ export function SearchDialog() {
                   rounded border border-slate-200 dark:border-slate-600
                   transition-colors"
                   onClick={(_) =>
-                    setSearch('Create a table called profiles with fields id, name, email')
+                    setSearch('Explain how rotation is used')
                   }
                 >
-                  Create a table called profiles with fields id, name, email
+                  Explain how rotation is used
                 </button>
               </div>
             </div>
