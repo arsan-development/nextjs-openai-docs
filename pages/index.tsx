@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Vector Database Chat Docs</title>
+        <title>Vector Database Assignment - Chat with documentation</title>
         <meta
           name="description"
           content="Class assignment | programming fundamentals II"
